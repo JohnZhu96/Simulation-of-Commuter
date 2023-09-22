@@ -1,0 +1,23 @@
+Linfeng Zhu
+COSI 12B PA5
+
+In this PA, I first created the Resort class that is the base of the whole simulation. People group first enter the resort,
+and a drone will be waiting for them. The Resort class therefore should include method that creates an instance of drone 
+and asks people to enter their desired stops.
+
+Then, since people are the main information source (which contains their names and desired stop, I created a Person class
+in order to save information for each person. The Person class contains a method that suggests that the person enters the 
+Resort and the stop he/she requested. A get-location method is also included in case that we need to get his location after 
+he exits the drone.
+
+After that, classes such as Stop and Job are all classes that store information for the Drone class to use.
+
+The Drone class is one of the most important class. It represents a drone instance and should be able to represent its
+activity. People that entering the drone should first enter their desired stops, which will become the "jobs" of the drone.
+Then, the drone will process each job one by one, and move to the stops to drop off people. Methods such as processJob 
+indicates the processing of the drone. The exit method indicates that some people is dropped off. Finally, after the drone 
+completed all its jobs, it will clean up all the jobs and fly back to base in order to pick up next group of 4 people. 
+
+The client code simply creates a resort instance, two groups of person instances, stop instances, and a drone instance.
+I used random number to assign each person with their desired destinations and start the simulation. The whole process
+of the trip is printed along with the information of the person that exits.
